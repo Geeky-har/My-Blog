@@ -1,0 +1,15 @@
+{
+  "params":
+  {
+    "local_uri": "mysql://root:@localhost/blog",
+    "prod_uri": "mysql://root:@localhost/blog",
+    "title": "World Wonder",
+    "fb_url": "https://facebook.com",
+    "tw_url": "https://twitter.com",
+    "gh_url": "https://github.com",
+    "tag_line": "A Blog Made for Wonderful Persons",
+    "user-email": "adityas8170@gmail.com",
+    "user-password": "Aditya007",
+    "about": "This is a blog website which is made and maintained by Harsh Negi, In this blog we will be uploading blogs related to various topics and various fields. This blog is ideal for all those people who have interest in various fields like: Technology, Sports, Philosophy, Music and much more!! So stay tuned for all those intersetig stuffs!!"
+  }
+}
