@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38a85664-42b5-49d4-8728-917969dcb917" name="Default Changelist" comment="" />
+    <list default="true" id="38a85664-42b5-49d4-8728-917969dcb917" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gSonmRQ4lCxSoryCBqUEqgStHc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/python" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -64,29 +85,29 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="130" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1598206918380" />
-    <state width="1509" height="236" key="GridCell.Tab.0.bottom" timestamp="1598206358741">
+    <state width="1509" height="234" key="GridCell.Tab.0.bottom" timestamp="1598294369612">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1509" height="236" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598206358741" />
-    <state width="1509" height="236" key="GridCell.Tab.0.center" timestamp="1598206358740">
+    <state width="1509" height="234" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598294369612" />
+    <state width="1509" height="234" key="GridCell.Tab.0.center" timestamp="1598294369612">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1509" height="236" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598206358740" />
-    <state width="1509" height="236" key="GridCell.Tab.0.left" timestamp="1598206358740">
+    <state width="1509" height="234" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598294369612" />
+    <state width="1509" height="234" key="GridCell.Tab.0.left" timestamp="1598294369612">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1509" height="236" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598206358740" />
-    <state width="1509" height="236" key="GridCell.Tab.0.right" timestamp="1598206358741">
+    <state width="1509" height="234" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598294369612" />
+    <state width="1509" height="234" key="GridCell.Tab.0.right" timestamp="1598294369612">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1509" height="236" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598206358741" />
+    <state width="1509" height="234" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598294369612" />
     <state x="279" y="0" key="SettingsEditor" timestamp="1598199880363">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="279" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598199880363" />
-    <state x="401" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1598196428213">
+    <state x="403" y="178" key="com.intellij.ide.util.TipDialog" timestamp="1598267976414">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="401" y="214" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598196428213" />
+    <state x="403" y="178" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598267976414" />
   </component>
 </project>

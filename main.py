@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-from flask_sqlalchemy import SQLAlchemy 
+from flask import Flask, render_template, request, session, redirect
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_mail import Mail
 import json
@@ -9,6 +9,8 @@ with open("config.json", "r") as c:
 
 local_server = True
 app = Flask(__name__)
+
+app.secret_key = params['secret_key']
 
 app.config.update(
     MAIL_SERVER='smtp.gmail.com',
@@ -43,18 +45,71 @@ class Post(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False)
     slug = db.Column(db.String(15), nullable=False)
-    content = db.Column(db.String(80), nullable=False)
+    content = db.Column(db.String(100), nullable=False)
     date = db.Column(db.String(10), nullable=False)
     img_file = db.Column(db.String(25), nullable=False)
+    sub_title = db.Column(db.String(100), nullable=False)
 
 
 @app.route('/')
 def index():
-    return render_template('index.html', params=params)
+    posts = Post.query.filter_by().all()[0:params['no_of_posts']]
+    return render_template('index.html', params=params, posts=posts)
+
+
+@app.route('/dashboard', methods=['GET', 'POST'])
+def admin():
+
+    posts = Post.query.all()
+
+    if 'user' in session and session['user'] == params['login_username']:   # if user already logged in
+        return render_template('main_dashboard.html', params=params, posts=posts)
+
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        if username == params['login_username'] and password == params['login_password']:
+            # set the session variable
+            session['user'] = username
+            return render_template('main_dashboard.html', params=params, posts=posts)
+
+    else:
+        return render_template('dashboard.html', params=params)
+
+
+@app.route("/edit/<string:sno>", methods=['GET', 'POST'])
+def edit(sno):
+    if 'user' in session and session['user'] == params['login_username']:
+        if request.method == 'POST':
+            new_title = request.form.get('title')
+            new_sub_title = request.form.get('sub_title')
+            new_slug = request.form.get('slug')
+            new_content = request.form.get('content')
+            new_img_file = request.form.get('img_file')
+
+            if sno == '0':
+                post = Post(title=new_title, slug=new_slug, content=new_content,
+                            sub_title=new_sub_title, img_file=new_img_file, date=datetime.now())
+                db.session.add(post)
+                db.session.commit()
+
+            else:
+                post = Post.query.filter_by(sno=sno).first()
+                post.title = new_title
+                post.slug = new_slug
+                post.content = new_content
+                post.img_file = new_img_file
+                post.sub_title = new_sub_title
+                db.session.commit()
+                return redirect('/edit/' + sno)
+        post = Post.query.filter_by(sno=sno).first()
+        return render_template('edit.html', params=params, post=post)
 
 
 @app.route('/about')
 def about():
+
     return render_template('about.html', params=params)
 
 
