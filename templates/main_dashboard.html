@@ -37,7 +37,7 @@
       <td>{{posts.title}}</td>
       <td>{{posts.date}}</td>
       <td><a class="btn btn-primary" href="edit/{{posts.sno}}">Edit </a></td>
-      <td><a class="btn btn-primary" href="edit/{{posts.sno}}">Delete </a></td>
+      <td><a class="btn btn-primary" href="delete/{{posts.sno}}">Delete </a></td>
     </tr>
 
     {%  endfor  %}
@@ -52,6 +52,14 @@
     width: 190px;
     margin-top: 25px;
 " ><a class="btn btn-primary" href="/edit/0">Add new post</a></span>
+
+  <hr>
+<h3 style="text-align: center">Logout</h3>
+<span style="display: block;
+    margin: auto;
+    width: 190px;
+    margin-top: 25px;
+" ><a class="btn btn-primary" href="/logout">Logout blog</a></span>
 
   <!-- Page Header -->
 

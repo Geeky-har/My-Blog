@@ -78,6 +78,16 @@ def admin():
         return render_template('dashboard.html', params=params)
 
 
+@app.route("/delete/<string:sno>", methods=['GET', 'POST'])
+def delete(sno):
+    if 'user' in session and session['user'] == params['login_username']:
+        post = Post.query.filter_by(sno=sno).first()
+        db.session.delete(post)
+        db.session.commit()
+
+        return redirect('/dashboard')
+
+
 @app.route("/edit/<string:sno>", methods=['GET', 'POST'])
 def edit(sno):
     if 'user' in session and session['user'] == params['login_username']:
@@ -105,6 +115,12 @@ def edit(sno):
                 return redirect('/edit/' + sno)
         post = Post.query.filter_by(sno=sno).first()
         return render_template('edit.html', params=params, post=post)
+
+
+@app.route('/logout')
+def logout():
+    session.pop('user')
+    return redirect('/dashboard')
 
 
 @app.route('/about')
