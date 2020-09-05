@@ -1,8 +1,8 @@
 {
   "params":
   {
-    "local_uri": "mysql://root:@localhost/blog",
-    "prod_uri": "mysql://root:@localhost/blog",
+    "local_uri": "mysql://root:@localhost:3307/blog",
+    "prod_uri": "mysql://root:@localhost:3307/blog",
     "title": "World Wonder",
     "fb_url": "https://facebook.com",
     "tw_url": "https://twitter.com",
